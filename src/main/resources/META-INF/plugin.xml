@@ -1,0 +1,31 @@
+<idea-plugin>
+    <idea-version since-build="243" until-build="243.*"/>
+    <id>org.jetbrains.plugins.translationunit</id>
+    <name>Translation Unit Generator</name>
+    <vendor>Una</vendor>
+    <version>1.0.0</version>
+
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="TranslationUnit"
+                    factoryClass="org.jetbrains.plugins.translationUnitGenerator.settings.TranslationToolWindow"
+                    anchor="right"
+                    icon="AllIcons.General.Settings"/>
+        <applicationService serviceImplementation="org.jetbrains.plugins.translationUnitGenerator.settings.TranslationUnitSettings"/>
+    </extensions>
+
+    <actions>
+        <action id="GenerateTranslationUnit"
+                class="org.jetbrains.plugins.translationUnitGenerator.actions.GenerateTranslationUnitAction"
+                text="Generate Translation Unit"
+                description="Automate translation unit creation">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+            <keyboard-shortcut first-keystroke="ctrl alt T" keymap="$default"/>
+            <keyboard-shortcut first-keystroke="meta alt T" keymap="Mac OS X"/>
+        </action>
+
+    </actions>
+
+</idea-plugin>
