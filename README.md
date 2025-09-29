@@ -2,6 +2,7 @@
 
   A little helper for PhpStorm (and friends) that turns highlighted text into reusable translation units. It understands `.php`, `.js`, and `.twig` files,
   swaps your selection for the right translation helper, and updates your XLIFF catalog on the spot.
+  Template: https://github.com/JetBrains/intellij-platform-plugin-template
 
   ## Highlights
 
@@ -28,4 +29,5 @@
 
   - Update the Twig/PHP/JS templates to match your project conventions.
   - Point to a different XLIFF file if you keep translations elsewhere.
+
   - Add a prefix so generated IDs follow your team’s naming scheme.
