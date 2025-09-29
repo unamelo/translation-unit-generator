@@ -3,3 +3,11 @@
 .intellijPlatform
 .qodana
 build
+.github
+.run
+build/
+out/
+.gradle/
+.idea/
+.vscode/
+.vscode/
